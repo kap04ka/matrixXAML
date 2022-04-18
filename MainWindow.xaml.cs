@@ -30,6 +30,7 @@ namespace matrixXAML
     {
         private TextBox[,] MatrixATextBoxes, MatrixBTextBoxes;
         private int lastSize;
+        private TextBox[,] resultFields;
 
         public MainWindow()
         {
@@ -76,7 +77,7 @@ namespace matrixXAML
             RandomFiling(MatrixATextBoxes);
             RandomFiling(MatrixBTextBoxes);
         }
-       
+
         private void btCalculateMatrix_Click(object sender, RoutedEventArgs e)
         {
             CalculateMatrix();
@@ -91,6 +92,28 @@ namespace matrixXAML
                 _ => throw new NotImplementedException(),
             };
         }
+        
+        private void btSave_Click(object sender, RoutedEventArgs e)
+        {
+            SaveCSV(resultFields);
+        }
+
+        private void SaveCSV(TextBox[,] result)
+        {
+            StreamWriter sw = new StreamWriter("C:\\Users\\user\\source\\repos\\matrixXAML\\result.txt");
+            for (int i = 0; i < lastSize; i++)
+            {
+                for (int j = 0; j < lastSize; j++)
+                {
+                    sw.Write(result[i, j].Text);
+                    sw.Write(";");
+                }
+                sw.WriteLine();
+            }
+            sw.Close();
+            MessageBox.Show("Сохранено");
+        }
+
 
         private void CalculateMatrix()
         {
@@ -116,7 +139,7 @@ namespace matrixXAML
             TimeSpan ts = stopWatch.Elapsed;
             double time = ts.TotalMilliseconds;
 
-            TextBox[,] resultFields = UpdateGrid(ResultMatrix, lastSize);
+            resultFields = UpdateGrid(ResultMatrix, lastSize);
 
             for (int i = 0; i < dimension; i++)
             {

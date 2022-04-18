@@ -36,6 +36,13 @@ namespace matrixXAML.Classes
             return resultMatix;
         }
 
+        public void Filling(Func<int, int, T> filling)
+        {
+            for (int i = 0; i < dimension; i++)
+                for (int j = 0; j < dimension; j++)
+                    array[i, j] = (dynamic)filling;
+        }
+
         public static Matrix<T> operator *(Matrix<T> A, Matrix<T> B)
         {
             Matrix<T> resultMatix = new Matrix<T>(A.dimension);
