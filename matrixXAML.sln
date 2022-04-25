@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32126.315
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "matrixXAML", "matrixXAML.csproj", "{D551E836-0014-45B6-ADE7-977C988FBFCC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "matrixXAML", "matrixXAML.csproj", "{D551E836-0014-45B6-ADE7-977C988FBFCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "matrixXAML.tests", "..\matrixXAML.tests\matrixXAML.tests.csproj", "{B7BF6F01-CE48-4B64-8014-EA2D689CCA20}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{D551E836-0014-45B6-ADE7-977C988FBFCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D551E836-0014-45B6-ADE7-977C988FBFCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D551E836-0014-45B6-ADE7-977C988FBFCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7BF6F01-CE48-4B64-8014-EA2D689CCA20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7BF6F01-CE48-4B64-8014-EA2D689CCA20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7BF6F01-CE48-4B64-8014-EA2D689CCA20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7BF6F01-CE48-4B64-8014-EA2D689CCA20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
