@@ -25,6 +25,7 @@ namespace matrixXAML.Classes
 
         public static Matrix<T> operator +(Matrix<T> A, Matrix<T> B)
         {
+            if (A.dimension != B.dimension) throw new ArgumentException();
             Matrix<T> resultMatix = new Matrix<T>(A.dimension);
             for (int i = 0; i < A.dimension; i++)
             {
@@ -43,6 +44,7 @@ namespace matrixXAML.Classes
 
         public static Matrix<T> operator *(Matrix<T> A, Matrix<T> B)
         {
+            if (A.dimension != B.dimension) throw new ArgumentException();
             Matrix<T> resultMatix = new Matrix<T>(A.dimension);
 
             for (int i = 0; i < A.dimension; i++)
