@@ -100,7 +100,7 @@ namespace matrixXAML
 
         private void SaveCSV(TextBox[,] result)
         {
-            StreamWriter sw = new StreamWriter("C:\\Users\\user\\source\\repos\\matrixXAML\\result.txt");
+            StreamWriter sw = new StreamWriter("C:\\Users\\user\\result.dat");
             for (int i = 0; i < lastSize; i++)
             {
                 for (int j = 0; j < lastSize; j++)
